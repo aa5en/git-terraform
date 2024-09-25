@@ -1,30 +1,30 @@
 variable "nsgname" {
   type        = string
-  description = "Network security group default"
+  description = "Name of the Network Security Group (NSG) that controls traffic to the VM."
 }
 
 variable "vnetname" {
   type        = string
-  description = "Virtual network name"
+  description = "Name of the Virtual Network (VNet) where the subnet is located."
 }
 
 variable "rgname" {
   type        = string
-  description = "Resouce Group name"
+  description = "Name of the resource group where all resources will be deployed."
 }
 
 variable "location" {
   type        = string
-  description = "(optional) describe your variable"
+  description = "Azure region where the resources will be deployed."
   default     = "westeurope"
 }
 
 variable "subnetname" {
-    type = string
-    description = "(optional) describe your variable"
+  type        = string
+  description = "Name of the subnet within the Virtual Network (VNet)."
 }
 
 variable "public_ip_name" {
-  description = "Name of the public IP."
+  description = "Name of the public IP address associated with the VM."
   type        = string
 }
