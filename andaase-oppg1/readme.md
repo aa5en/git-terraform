@@ -1,4 +1,4 @@
-__TOC__
+__[TOC]__
 
 ## Formål med Modulene
 
