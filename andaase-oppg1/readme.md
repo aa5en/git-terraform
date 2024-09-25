@@ -110,7 +110,7 @@ For å bruke scriptene kan man laste ned dette git repoet som zip fil. Derretter
 
 1. Alle påkrevde felt til modulene må brukes. 
 2. En resource group i mainfilen utenfor modulene er opprettet og kan da brukes som input til modulene som trenger dette.
-3. Variabler brukt i root main.tf filen er definert i en egen terraform.tfvars fil. Se eksempelfil under. **Legg merke til at terraform version 4.0.X krever subscription id som IKKE er definert i eksempel tfvars filen**
+3. Variabler brukt i root main.tf filen er definert i en egen terraform.tfvars fil. Se [eksempelfil.tfvars](terraform.exampletfvars). **Legg merke til at terraform version 4.0.X krever subscription id som IKKE er definert i eksempel tfvars filen**
 4. Kjør `terraform init` (Hvis du allerede har initialisert kjør `terraform init -reconfigure`)
 5. Kjør `terraform plan -out=main.tfplan`
 6. Kjør `terraform apply "main.tfplan"`

@@ -1,0 +1,30 @@
+subscription_id = "DIN SUBSCRIPTIONID"
+rg_name = "aa-rg-tf-oblig1"
+
+#Module storage account
+sa_name = "aasatf"
+sc_name = "aa-sc-tf"
+
+#Module keyvault
+kvname = "aakvname"
+sa_accesskey_name = "aa-sa-accesskey"
+vm_username = "andaase-admin"
+vmcredentials = "aaoblig1-tf"
+
+#Module Netorking
+
+nsgname = "aa-nsg-tf-oblig1"
+vnetname = "aa-vnet-tf-oblig1"
+public_ip_name = "aa-pip-tf-oblig1"
+subnetname = "aa-subnet-tf-oblig1"
+
+#Module VM
+
+vmname = "aa-vm-linux-oblig1"
+nicname = "aa-vm-nic-oblig1"
+nicipname = "aa-vm-nic-ip-oblig1"
+#OS version (Valgfri men tar med som eksempel. Disse er default for disse verdiene)
+vmpublisher = "Canonical"
+vmoffer     = "0001-com-ubuntu-server-jammy"
+vmsku       = "22_04-lts"
+vmversion   = "latest"
