@@ -10,18 +10,18 @@ Denne modulen oppretter en Azure Key Vault for å lagre nøkler (secrets). Her e
 
 Jeg har laget en secret som inneholder både username og password for VMen. Passordet blir også generert med random_password som er flagget som sensitiv slik at det ikke outputtes til konsollen. i tillegg er SA access keyen lagret i sin egen secret. Disse sendes som output slik at de kan brukes til VMen. Disse er markert som sensitiv.
 
-![Change to list](images\changelist.png)
+![Change to list](images/changelist.png)
 
 Hvis jeg oppdaterer tilgangene slik at jeg får list, planner og applyer igjen vil jeg få tilganger til å gå inn å se på secretsene i Azure portal. Under kan du se et skjermbilde av hvordan en potensiell brukernavn og passord ville vært lagret. De er lagret som json format for å få både brukernavn og passord i samme secret som per oppgaven sier. Innså i ettertid at man også kan lagre navnet på secreten som brukernavnet og secreten inni.
 
-![Secret](images\secrets.png)
+![Secret](images/secrets.png)
 
 ### **Nettverksmodul**: 
 
 Oppretter et virtuelt nettverk (VNet) med et subnett, samt et Network Security Group (NSG) for å beskytte VM-er mot eksterne trusler. Modulen håndterer også offentlig IP-oppsett.
 NSGen er lagt til både private adresserommet og den ene offentlige adressen som er opprettet. Under ser du adresser som er tilordnet VMen som blir opprettet. Jeg har også en NSG som ikke er vist på bilde som har en regel som tillater port 22 (SSH) slik at vi kan teste å koble til senere.
 
-![VMnetwork](images\network.png)
+![VMnetwork](images/network.png)
 
 ### **Lagringskonto Modul**: 
 
@@ -30,7 +30,7 @@ Setter opp en storage account og container som kan brukes til lagring av data. M
 ### **VM Modul**: 
 Oppretter en linux (Ubuntu 22.04lts) VM med en public og private IP. Brukernavn og passord tas fra keyvaultet gjennom keyvaultet sine output variables. VMen bruker også nettverkene fra nettverksmodulen slik at man kan få nett. Under kan du se et bilde fra at man får til å SSHe inn til VMen. Man må da selvfølgelig gi seg selv muligheten til å hente ut passordet ved å endre access policyen for å klare å logge inn.
 
-![ssh to vm](images\ssh_vm.png)
+![ssh to vm](images/ssh_vm.png)
 
 
 
@@ -116,8 +116,8 @@ For å bruke scriptene kan man laste ned dette git repoet som zip fil. Derretter
 6. Kjør `terraform apply "main.tfplan"`
 7. Done!
 
-![alt text](images\success.png)
+![alt text](images/success.png)
 
 For å slette det som kjører kan du kjøre `terraform destroy` og bekrefte med _yes_. 
 
-![alt text](images\destroyed.png)
+![alt text](images/destroyed.png)
