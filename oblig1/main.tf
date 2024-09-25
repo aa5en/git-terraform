@@ -24,9 +24,22 @@ module "keyvault" {
 module "networking" {
   source = "./modules/network"
   nsgname = var.nsgname
-  rgname = var.rg_name
+  rgname = azurerm_resource_group.rg.name
   location = var.location
   public_ip_name = var.public_ip_name
   subnetname = var.subnetname
   vnetname = var.vnetname
+}
+
+module "vm" {
+  source = "./modules/vm"
+  rgname = azurerm_resource_group.rg.name
+  nicname = var.nicname
+  nicipname = var.nicipname
+  subnet_id = module.networking.subnet_id
+  nsg_id = module.networking.nsg_id
+  public_ip_id = module.networking.public_ip_id
+  username = module.keyvault.vm_username
+  password = module.keyvault.vm_password
+  vmname = var.vmname
 }

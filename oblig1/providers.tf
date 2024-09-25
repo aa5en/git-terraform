@@ -5,12 +5,6 @@ terraform {
       version = "4.3.0"
     }
   }
-  backend "azurerm" {
-    resource_group_name  = "aa-rg-backend-tfstate"
-    storage_account_name = "aasabetfsg8dafp3yfl"
-    container_name       = "aatfstate"
-    key                  = "aaoblig1.terraform.tfstate"
-  }
 }
 provider "azurerm" {
   # Configuration options

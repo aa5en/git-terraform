@@ -55,6 +55,7 @@ variable "public_ip_name" {
   description = "Name of the public IP."
   type        = string
 }
+
 variable "nsgname" {
   type        = string
   description = "Network security group default"
@@ -63,4 +64,41 @@ variable "nsgname" {
 variable "vnetname" {
   type        = string
   description = "Virtual network name"
+}
+
+variable "vmname" {
+    type = string
+    description = "(optional) describe your variable"
+}
+
+variable "nicname" {
+  type = string
+  description = "(optional) describe your variable"
+}
+
+variable "vmpublisher" {
+  type = string
+  description = "(optional) describe your variable"
+  default = "Canonical"
+}
+
+variable "vmoffer" {
+  type = string
+  description = "(optional) describe your variable"
+  default = "0001-com-ubuntu-server-jammy"
+}
+variable "vmsku" {
+  type = string
+  description = "(optional) describe your variable"
+  default = "22_04-lts"
+}
+variable "vmversion" {
+  type = string
+  description = "(optional) describe your variable"
+  default = "latest"
+}
+
+variable "nicipname" {
+    type = string
+    description = "(optional) describe your variable"
 }
